@@ -8,7 +8,7 @@
     <script src="./react-dom.development.js"></script>
     <script src="./babel.min.js"></script>
     <script src="./popper.js"></script>
-    <script src="./react-router-dom.production.min.js"></script>
+    <script src="./react-router-dom.production.min.js" ></script>
 </head>
 
 <body>
@@ -20,9 +20,34 @@
             return <h1>Hello World!</h1>;
         }
 
+        const Hello2 = (
+            <h2> Hello 2 </h2>
+        )
+
+         function Nome() {
+            return <h2> Enzo</h2>;
+         }
+
+         function Sobrenome() {
+            return <h2> Horçai</h2>;
+         }
+
+         function Endereco() {
+            return <h2> Londrina Pr</h2>;
+         }
+
+        
+
+
         const container = document.getElementById('mydiv');
         const root = ReactDOM.createRoot(container);
-        root.render(<Hello />)
+        root.render(
+            <React.StrictMode>
+            <Nome />
+            <Sobrenome />
+            <Endereco />    
+            </React.StrictMode>)
+      // root.render(<h1> Teste </h1>)
     </script>
 
 </body>
